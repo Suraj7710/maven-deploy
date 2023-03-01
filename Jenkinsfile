@@ -19,13 +19,9 @@ pipeline    /* installation on master and deployment on slave */
 			}
 			stage("clone&packaging"){
 						steps{
-						    dir("/mnt/game"){
-									sh "git clone https://github.com/Shantanumajan6/game-of-life.git"
-									sh "chmod -R 777 /mnt/game"
-									}
-							dir("/mnt/game/game-of-life/"){
-									sh "mvn clean install"
-									}
+					   		sh "rm -rf /mnt/game"
+							sh "git clone https://github.com/Shantanumajan6/game-of-life.git"
+							sh "chmod -R 777 /mnt/game"
 
 							}
 						}
