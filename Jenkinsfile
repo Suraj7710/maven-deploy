@@ -10,10 +10,9 @@ pipeline    /* installation on master and deployment on slave */
 			stage("installation"){
 					steps{
 						sh "sudo su -"
-						sh "yum install git -y"
-						sh "yum install java-1.8.0-openjdk-devel.x86_64 -y"
-						sh "yum install maven -y"
-						sh "yum install docker -y"
+						sh "sudo yum install git -y"
+						sh "sudo yum install maven -y"
+						sh "sudo yum install docker -y"
 						sh "service docker start"
 					}
 			}
