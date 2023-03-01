@@ -3,11 +3,11 @@ pipeline    /* installation on master and deployment on slave */
      agent{
 	        label{
 				label "built-in"
-				customWorkspace "/mnt"
+				customWorkspace "/mnt/game"
 			}
 		}
 		
-		stages {
+		stages{
 			stage("installation"){
 					steps{
 						sh "sudo su -"
