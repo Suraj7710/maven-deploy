@@ -33,7 +33,7 @@ pipeline    /* installation on master and deployment on slave */
 			}
 			stage("deploying"){
 				steps{
-					sh "cp -r sh "cp -r /mnt/game/game-of-life/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.72/webapps/"
+					sh "cp -r /mnt/game/game-of-life/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.72/webapps/"
 				}
 			}
 		}
