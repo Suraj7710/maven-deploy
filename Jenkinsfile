@@ -3,6 +3,7 @@ pipeline    /* installation on master and deployment on slave */
      agent{
 	        label{
 				label "built-in"
+				sh "sudo su -"
 				customWorkspace "/mnt/game"
 			}
 		}
@@ -10,7 +11,6 @@ pipeline    /* installation on master and deployment on slave */
 		stages{
 			stage("installation"){
 					steps{
-						sh "sudo su -"
 						sh "sudo yum install git -y"
 						sh "sudo yum install maven -y"
 						sh "sudo yum install docker -y"
