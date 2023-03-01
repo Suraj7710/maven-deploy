@@ -1,8 +1,9 @@
-pipeline    
+pipeline    /* installation on master and deployment on slave */
 {
      agent{
 	        label{
 				label "built-in"
+				customWorkspace "/mnt/game"
 			}
 		}
 		
