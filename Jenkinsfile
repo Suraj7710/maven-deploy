@@ -1,5 +1,6 @@
-pipeline    /* installation on master and deployment on slave */
+pipeline    
 {
+	/* installation on master and deployment on slave */
      agent{
 	        label{
 				label "built-in"
