@@ -21,11 +21,11 @@ pipeline    /* installation on master and deployment on slave */
 							steps{
 								sh "cd /mnt/server"
 								sh "wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.72/bin/apache-tomcat-9.0.72.zip"
-								sh "unzip apache-tomcat-9.0.71.zip"
-								sh "rm -rf apache-tomcat-9.0.71.zip"
-								sh "cd apache-tomcat-9.0.71/webapps"
+								sh "unzip apache-tomcat-9.0.72.zip"
+								sh "rm -rf apache-tomcat-9.0.72.zip"
+								sh "cd apache-tomcat-9.0.72/webapps"
 								sh "wget https://get.jenkins.io/war-stable/2.346.3/jenkins.war"
-								sh "cd /mnt/server/apache-tomcat-9.0.71/bin"
+								sh "cd /mnt/server/apache-tomcat-9.0.72/bin"
 								sh "chmod 777 *"
 								sh "./startup.sh"
 							}
