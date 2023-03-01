@@ -3,7 +3,6 @@ pipeline    /* installation on master and deployment on slave */
      agent{
 	        label{
 				label "built-in"
-				sh "sudo su -"
 				customWorkspace "/mnt/game"
 			}
 		}
@@ -20,6 +19,7 @@ pipeline    /* installation on master and deployment on slave */
 			stage("clone&packaging"){
 						steps{
 					   		sh "rm -rf /mnt/game"
+							sh "cd /mnt/"
 							sh "git clone https://github.com/Shantanumajan6/game-of-life.git"
 							sh "chmod -R 777 /mnt/game"
 
