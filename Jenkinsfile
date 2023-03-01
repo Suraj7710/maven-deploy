@@ -19,13 +19,13 @@ pipeline    /* installation on master and deployment on slave */
 			}
 			stage("tomcat-installation"){
 							steps{
-								sh "cd /server"
+								sh "cd /mnt/server"
 								sh "wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.zip"
 								sh "unzip apache-tomcat-9.0.71.zip"
 								sh "rm -rf apache-tomcat-9.0.71.zip"
 								sh "cd apache-tomcat-9.0.71/webapps"
 								sh "wget https://get.jenkins.io/war-stable/2.346.3/jenkins.war"
-								sh "cd /server/apache-tomcat-9.0.71/bin"
+								sh "cd /mnt/server/apache-tomcat-9.0.71/bin"
 								sh "chmod 777 *"
 								sh "./startup.sh"
 							}
