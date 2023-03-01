@@ -26,7 +26,7 @@ pipeline    /* installation on master and deployment on slave */
 						}
 			stage("packaging-war"){
 				steps{
-					sh "cd /mnt/game-of-life/"
+					sh "cd /mnt/game/game-of-life/"
 					sh "mvn clean install"
 				}
 			}
